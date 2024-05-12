@@ -1,5 +1,5 @@
-# Astro Runtime includes the following pre-installed providers packages: https://docs.astronomer.io/astro/runtime-image-architecture#provider-packages
 apache-airflow-providers-github==2.6.0
-hubspot-api-client
-python-dotenv
-pandas
+hubspot-api-client==9.0.0
+python-dotenv==1.0.1
+pandas==2.2.2
+minio==7.2.7
