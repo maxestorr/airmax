@@ -1,8 +1,11 @@
 init:
 	astro dev init
 
-up:
+start:
 	astro dev run
+
+stop:
+	astro dev stop
 
 minio:
 	minio server /tmp/minio
