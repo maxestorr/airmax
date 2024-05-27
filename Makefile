@@ -2,7 +2,7 @@ init:
 	astro dev init
 
 start:
-	astro dev run
+	astro dev start
 
 stop:
 	astro dev stop
