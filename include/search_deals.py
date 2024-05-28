@@ -12,20 +12,26 @@ from include.constants import HUBSPOT_ACCESS_TOKEN
 api_client = hubspot.Client.create(access_token=HUBSPOT_ACCESS_TOKEN)
 
 # timestamp in milliseconds
-date = str(int(parser.isoparse("2024-05-24T00:00:00.000").timestamp() * 1000))
-print(date)
-pen_date = datetime(2024, 5, 24, 0, 0, 0, 0).int_timestamp * 1000
-print(pen_date)
+first_date = str(int(parser.isoparse("2024-05-20T00:00:00.000").timestamp() * 1000))
+last_date = str(int(parser.isoparse("2024-05-27T00:00:00.000").timestamp() * 1000))
+# print(date)
+# pen_date = datetime(2024, 5, 24, 0, 0, 0, 0).int_timestamp * 1000
+# print(pen_date)
 
 public_object_search_request = PublicObjectSearchRequest(
     filter_groups=[
         {
             "filters": [
                 {
-                    "value": date,
                     "propertyName": "lastmodifieddate",
-                    "operator": "GTE"
-                }
+                    "operator": "GTE",
+                    "value": first_date,
+                },
+                {
+                    "propertyName": "lastmodifieddate",
+                    "operator": "LT",
+                    "value": last_date,
+                },
             ]
         }
     ], limit=10
