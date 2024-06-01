@@ -33,7 +33,8 @@ def hubspot_pipeline():
         try:
             api_response = hubspot_client.crm.deals.get_all()
             with open(MY_FILE, "w") as f:
-                json.dump(api_response, f, default=str)
+                # TODO: indent=4 not properly encoding newlines
+                json.dump(api_response, f, indent=4, default=str)
 
         except deals.ApiException as e:
             print(f"Exception when calling hubspot.crm.deals.get_all(): {e}\n")
