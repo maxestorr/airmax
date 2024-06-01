@@ -1,3 +1,8 @@
+## Notes:
+
+- To enable the 'test connection' button add `AIRFLOW__CORE__TEST_CONNECTION=Enabled`
+    to `.env` file
+
 ## Todo:
 
 - Want to be able to mount a `data` directory for local development

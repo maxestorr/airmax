@@ -1,6 +1,0 @@
-# Dev requirements to be installed locally, not used by docker container
-# apache-airflow-providers-github==2.6.0
-hubspot-api-client==9.0.0
-python-dotenv==1.0.1
-pandas==2.2.2
-minio==7.2.7
